@@ -1,0 +1,27 @@
+CompileFlags:
+  Compiler: clang
+  
+  Add:
+    - "-std=gnu23"                    
+    - "-ffreestanding"              
+    - "-nostdinc"                   
+    - "-fno-builtin"                         #
+    - "-Wall"                        
+    - "-Wextra"                      
+    - "-Wpedantic"                   
+    - "-I./include"                      
+  
+  Remove:
+    - "-std=*"
+
+Diagnostics:
+  UnusedIncludes: Strict
+  MissingIncludes: Strict
+  Suppress:
+    - "c23-extensions"           
+  
+
+Completion:
+  DetailedLabel: Yes
+  BundleOverloads: Yes
+           
